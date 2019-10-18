@@ -76,6 +76,7 @@ async function accessSpreadsheet() {
 
 function delData() {
 	let promise = new Promise((resolve, reject) => {
+		db.collection('Foremans').insertOne({name: "Bob", age: 34})
 		db.collection('Foremans').drop((err, result) => {
 			if (err) {
 				reject('Не удается удалить коллекцию:  ', err)
